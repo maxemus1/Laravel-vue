@@ -18,11 +18,11 @@
                         <div class="shop-item">
                             <!-- Product Image -->
                             <div class="shop-item-image">
-                                <a href="page-product-details.html"><img :src="product.picture" alt="Item Name"></a>
+                                <a href="page-product-details.html"><img v-bind:src="product.picture" v-bind:alt="product.name"></a>
                             </div>
                             <!-- Product Title -->
                             <div class="title">
-                                <h3><a href="page-product-details.html">Lorem ipsum dolor</a></h3>
+                                <h3><a href="page-product-details.html">{{product.name}}</a></h3>
                             </div>
                             <!-- Product Available Colors-->
                             <div class="colors">
@@ -34,7 +34,7 @@
                             </div>
                             <!-- Product Price-->
                             <div class="price">
-                                {{products.price }}
+                                {{product.price}}
                             </div>
                             <!-- Add to Cart Button -->
                             <div class="actions">
@@ -43,7 +43,6 @@
                         </div>
                         <!-- End Product -->
                     </div>
-
                 </div>
                 <div class="row justify-content-center">
                     <nav aria-label="Page navigation example">
@@ -83,7 +82,8 @@
         mounted() {
             this.axios
                 .get('/product')
-                .then(response => (this.products = response));
+                .then(response => (this.products = response.data));
+
         }
     };
 </script>
