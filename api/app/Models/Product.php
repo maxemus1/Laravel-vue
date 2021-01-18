@@ -17,6 +17,6 @@ class Product extends Model
         'prise',
         'picture',
         'description',
-        'categories_id',
+        'category_id',
     ];
 }

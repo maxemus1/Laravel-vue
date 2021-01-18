@@ -15,7 +15,7 @@ class CreateCategoriesProductsTable extends Migration
     {
 
         Schema::table('products', function ($table) {
-            $table->foreign('categories_id')->references('id')->on('categories')->onDelete('NO ACTION');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('NO ACTION');
         });
 
     }
