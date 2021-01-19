@@ -1,15 +1,5 @@
 <template>
     <section class="dashboard">
-        <div class="section section-breadcrumbs">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1>Products Listing (4 Columns)</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="eshop-section section">
             <div class="container">
                 <div class="row">
@@ -18,7 +8,7 @@
                         <div class="shop-item">
                             <!-- Product Image -->
                             <div class="shop-item-image">
-                                <a href="page-product-details.html"><img v-bind:src="product.picture" v-bind:alt="product.name"></a>
+                                <a href="page-product-details.html"><img v-bind:src="product.image" v-bind:alt="product.name"></a>
                             </div>
                             <!-- Product Title -->
                             <div class="title">
@@ -34,11 +24,11 @@
                             </div>
                             <!-- Product Price-->
                             <div class="price">
-                                {{product.price}}
+                                {{product.price}}руб.
                             </div>
                             <!-- Add to Cart Button -->
                             <div class="actions">
-                                <button type="submit" class="btn btn-small">Add to Cart</button>
+                                <button type="button" class="btn btn-primary">Add to Cart</button>
                             </div>
                         </div>
                         <!-- End Product -->

@@ -10,15 +10,16 @@ class ProductResource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param  Request  $request
+     * @param Request $request
      * @return array
      */
     public function toArray($request)
     {
         return [
+            'id' => $this->id,
             'name' => $this->name,
-            'prise' => $this->prise,
-            'picture' => $this->picture,
+            'price' => $this->price,
+            'image' => $this->image,
             'description' => $this->description,
             'category_id' => $this->category_id,
         ];
