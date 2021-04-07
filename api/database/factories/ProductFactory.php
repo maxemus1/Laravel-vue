@@ -23,8 +23,8 @@ class ProductFactory extends Factory
     {
         return [
             'name' => $this->faker->firstNameMale,
-            'prise' => rand(999, 1500),
-            'picture' => $this->faker->image(),
+            'price' => rand(999, 1500),
+            'image' => $this->faker->image(),
             'description' => $this->faker->text,
             'category_id'=>rand(1,4),
         ];

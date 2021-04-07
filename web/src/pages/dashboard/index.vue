@@ -73,7 +73,6 @@
             this.axios
                 .get('/product')
                 .then(response => (this.products = response.data));
-
         }
     };
 </script>
